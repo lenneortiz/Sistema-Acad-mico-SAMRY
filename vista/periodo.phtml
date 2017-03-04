@@ -1,0 +1,269 @@
+<?php
+$file="../model/ModelPeriodo.php";
+if(file_exists($file)):
+	require_once($file);
+	$classPeriodo=new Periodo();
+
+endif;
+
+
+if(isset($_GET['vistaPeriodo']) ):
+
+	switch($_GET['vistaPeriodo']):
+
+
+case '1':
+
+	?>
+		<div class="menu-izquierdo">
+						<ul class="list-menu-izquierdo">
+							<li><a href="javascript:void(0);" id="crear-periodo" >Creación de Cohorte</a></li>
+							<li><a href="javascript:void(0);" id="modificar-periodo">Modificación de Cohorte </a></li>
+							<li><a href="javascript:void(0);" id="crear-semestre">Creación de semestres</a></li>
+							<li><a href="javascript:void(0);" id="modificar-semestre">Modificación de semestres </a></li>
+							<!--<li><a href="javascript:void(0);">Modificación de tipo de Calificación</a></li>-->
+						</ul>
+					</div>
+
+
+
+	<?php
+
+break;
+
+case '2';
+
+	?>
+		<blockquote id="cont-form-materia">
+
+<form id="form-registro-periodo">
+	<fieldset>
+		<legend>Nueva Cohorte</legend>
+		
+			<label>Nombre:</label>
+				<input type="text" name="nom_periodo" id="nom_periodo" maxlength="12" placeholder="ejemplo:Cohorte-2014"/><br><br><br><br>
+				
+				<label>Fec.Inicio:</label>
+					<input type="text" name="fec_inic_p" id="fec_inic_p" maxlength="20" autocomplete="off" placeholder="20/05/2000"/><br><br><br><br>
+
+				<label>Fec.Final:</label>
+					
+					<input type="text" name="fec_fin_p" id="fec_fin_p" maxlength="20"  autocomplete="off" placeholder="20/05/2000"/>
+				
+				<label>Estado:</label>
+				<select name="estado" id="estado">
+					
+					<option value="activo">Activo</option>
+					<option value="no activo">No activo</option>
+				</select>
+
+				<p class="bloq-submit">
+				<br>
+				<input type="submit" value="Guardar" id="submit-agregar-periodo">
+				</p>
+			
+	</fieldset>
+</form>
+
+<div style="height:10px"></div>
+</blockquote>
+
+	<?php
+
+break;
+
+case '3':
+
+?>
+
+<div id="cont-select-user">
+<h2>Modificación de Cohorte</h2>
+<div class="espacio"></div>
+<form id="data-select-id-periodo">
+<select name="periodo" id="select-data-uperiodo" class="select-data-user-dinamic">
+<?php
+$selectPeriodo = $classPeriodo->get_periodo();
+foreach($selectPeriodo as $key => $value):
+
+	?>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<option class="select-id-data-user" value="<?php echo $value['id_periodo'];?>"><?php echo ucfirst($value['describe_periodo']);?> <?php echo ucfirst($value['estado']);?> </option>
+
+	<?php
+
+endforeach;
+
+?>
+</select>
+<input type="submit" value="buscar Periodo" id="select-buscar-periodo"/>
+</form>
+</div><!--fin del cont-select-user-->
+
+<?php
+
+break;
+case '4':
+if(isset($_GET['idperiodo']) AND is_numeric($_GET['idperiodo'])):
+	$editPeriodo=$classPeriodo->get_periodo_por_id($_GET['idperiodo']);
+	?>
+		<blockquote id="cont-form-materia">
+
+<form id="form-registro-periodo">
+<input type="hidden" name="id_periodo" id="id_periodo" value="<?php echo $editPeriodo[0] ['id_periodo']?>"/>
+	<fieldset>
+		<legend>Actualizar Cohorte<span style="float:right;font-weight:bold">Creado: <?php echo $editPeriodo[0] ['fec_registro']?></span ></legend>
+		
+	<label>Nombre:</label>
+<input type="text" name="nom_periodo" value="<?php echo $editPeriodo[0] ['describe_periodo']?>"  autocomplete="off" readonly="readonly" id="nom_periodo" maxlength="12" placeholder="ejemplo:Periodo 2014" /><br><br><br><br>
+				
+				<label>Fec.Inicio:</label>
+					<input type="text" value="<?php echo $editPeriodo[0] ['fec_inic']?>"  autocomplete="off" name="fec_inic_p" id="fec_inic_p" maxlength="20" placeholder="20/05/2000"/><br><br><br><br>
+
+				<label>Fec.Final:</label>
+					
+					<input type="text" name="fec_fin_p"  autocomplete="off" value="<?php echo $editPeriodo[0] ['fec_fin']?>" id="fec_fin_p" maxlength="20" placeholder="20/05/2000"/>
+				
+				<label>Estado:</label>
+				<select name="estado" id="estado">
+					<option value="<?php echo $editPeriodo[0] ['estado']?>"><?php echo $editPeriodo[0] ['estado']?></option>
+					<option value="activo">Activo</option>
+					<option value="no activo">No activo</option>
+				</select>
+				
+
+				<div style="height:10px"></div>
+				<p class="bloq-submit">
+				<br>
+				<input type="submit" value="Guardar" id="submit-agregar-periodo">
+				</p>
+			
+	</fieldset>
+</form>
+<div style="height:10px"></div>
+</blockquote>
+
+	<?php
+
+endif;
+
+break;
+
+case '5':
+
+?>
+	<blockquote id="cont-form-materia">
+
+<form id="form-registro-periodo">
+	<fieldset>
+		<legend>Nuevo Semestre </legend>
+		
+			<label>Nombre:</label>
+				<input type="text" name="nom_semestre" id="nom_semestre" maxlength="13"  placeholder="ejemplo:semestre-2014"/><br><br><br><br>
+				
+				<label>Fec.Inicio:</label>
+					<input type="text" name="fec_inic_p" id="fec_inic_s"  autocomplete="off" maxlength="20" placeholder="20/05/2000"/><br><br><br><br>
+
+				<label>Fec.Final:</label>
+					
+					<input type="text" name="fec_fin_p" id="fec_fin_s"  autocomplete="off" maxlength="20" placeholder="20/05/2000"/>
+				
+				<label>Estado:</label>
+				<select name="estado" id="estado">
+					
+					<option value="activo">Activo</option>
+					<option value="no activo">No activo</option>
+				</select>
+				<label>Asignar a Cohorte:</label>
+				<select name="periodo" id="select-data-periodo" class="select-data-user-dinamic">
+<?php
+$selectPeriodo = $classPeriodo->get_periodo_activo();
+foreach($selectPeriodo as $key => $value):
+
+	?>
+	<option class="select-id-data-periodo" value="<?php echo $value['id_periodo'];?>"><?php echo ucfirst($value['describe_periodo']);?> <?php echo ucfirst($value['estado']);?> </option>
+	<?php
+
+endforeach;
+
+?>
+</select>
+				<div style="height:5px"></div>
+				<p class="bloq-submit">
+				<br>
+				<input type="submit" value="Guardar" id="submit-agregar">
+				</p>
+			
+	</fieldset>
+</form>
+
+<div style="height:10px"></div>
+</blockquote>
+
+
+
+<?php
+break;
+
+case'6':
+	
+
+?>
+	<blockquote id="cont-form-materia">
+
+<form id="form-registro-periodo">
+	<fieldset>
+		<legend>Actualización  Semestre </legend>
+		
+			<label>Nombre:</label>
+				<input type="text" name="nom_semestre" id="nom_semestre"  autocomplete="off" maxlength="12" placeholder="ejemplo:Periodo 2014"/><br><br><br><br>
+				
+				<label>Fec.Inicio:</label>
+					<input type="text" name="fec_inic_p" id="fec_inic_s"  autocomplete="off" maxlength="20" placeholder="20/05/2000"/><br><br><br><br>
+
+				<label>Fec.Final:</label>
+					
+					<input type="text" name="fec_fin_p" id="fec_fin_s"  autocomplete="off" maxlength="20" placeholder="20/05/2000"/>
+				
+				<label>Estado:</label>
+				<select name="estado" id="estado">
+					
+					<option value="activo">Activo</option>
+					<option value="no activo">No activo</option>
+				</select>
+				<label>Asignar a Cohorte:</label>
+				<select name="semestre" id="select-data-periodo" class="select-data-user-dinamic">
+<?php
+$selectPeriodo = $classPeriodo->get_periodo_activo();
+foreach($selectPeriodo as $key => $value):
+
+	?>
+	<option class="select-id-data-periodo" value="<?php echo $value['id_periodo'];?>"><?php echo ucfirst($value['describe_periodo']);?> <?php echo ucfirst($value['estado']);?> </option>
+	<?php
+
+endforeach;
+
+?>
+</select>
+				<div style="height:5px"></div>
+				<p class="bloq-submit">
+				<br>
+				<input type="submit" value="Guardar" id="submit-agregar-periodo">
+				</p>
+			
+	</fieldset>
+</form>
+
+<div style="height:10px"></div>
+</blockquote>
+
+
+
+<?php
+break;
+
+	endswitch;
+
+		
+	
+
+endif;
+?>

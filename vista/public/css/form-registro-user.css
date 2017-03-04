@@ -1,0 +1,528 @@
+.container-form{
+	position: relative;
+	width: 100%;
+	background: red
+}
+#form-user
+{
+	width:auto;
+	max-height: 500px;
+	font:12px Arial, Helvetica, sans-serif;
+	color:#fff;
+	margin:0 auto;
+	padding: unset;
+}
+
+.bloque-datos-right
+{
+	width: 48%;
+	position: relative;
+	float: right;
+	height:100px;
+	border:1px solid hsl(203,70%,80%);
+	border-radius:5px;
+	padding: 5px;
+	margin-top:10px;
+	
+}
+.container-30
+{
+	width:calc(100% - 70%);
+	height:300px;
+	float:left;
+	border:1px solid hsl(203,70%,80%);
+	border-radius:5px;
+	margin:5px 5px 0px 5px;
+}
+.container-40
+{
+	width:calc(100% - 50%);
+	height:auto;
+	float:left;
+	border:1px solid hsl(203,70%,80%);
+	border-radius:5px;
+	margin:5px 5px 0px 5px;
+}
+.container-25
+{
+	width:calc(100% - 72%);
+	height:300px;
+	float:left;
+	border:1px solid hsl(203,70%,80%);
+	border-radius:5px;
+	margin:5px 5px 0px 5px;
+}
+.container-20
+{
+	width:calc(100% - 80%);
+	height:300px;
+	float:left;
+	border:1px solid hsl(203,70%,80%);
+	border-radius:5px;
+	margin:5px 5px 0px 5px;
+}
+.container-15
+{
+	width:calc(100% - 85%);
+	height:300px;
+	float:left;
+	border:1px solid hsl(203,70%,80%);
+	border-radius:5px;
+	margin:5px 5px 0px 5px;
+}
+.bloque-datos-left
+{
+	width: 48%;
+	position: relative;
+	float: left;
+	height:100px;
+	border:1px solid hsl(203,70%,80%);
+	border-radius:5px;
+	padding: 5px;
+	margin-top:10px;
+}
+.bloque-datos-left-full
+{
+	width:calc(100% - 5%);
+	height:auto;
+	float:left;
+	border:1px solid hsl(203,70%,80%);
+	border-radius:5px;
+	margin:15px 20px 0px 20px;
+}
+.bloque-datos-left-2
+{
+	width:calc(100% - 71%);
+	height:auto;
+	float:left;
+	border:1px solid hsl(203,70%,80%);
+	border-radius:5px;
+	margin:5px 2px 0px 20px;
+}
+.bloque-data-left
+{
+	width:calc(100% - 5%);
+	height:auto;
+	float:left;
+	border:1px solid hsl(203,70%,80%);
+	border-radius:5px;
+	margin:15px 20px 0px 20px;
+}
+#form-user .titulo
+{
+	width:100%;
+	height:20px;
+	background:#6495ED;
+}
+#form-user .titulo img
+{
+	float:right;
+	cursor:pointer;
+	margin-top: -15px
+}
+#form-user fieldset
+{
+	
+	border:none;
+	background-color: rgba(0, 0, 255, 0.2);
+	box-shadow:0px 4px 6px 0px hsla(0,10%,10%,0.4);
+	width:auto;
+	min-height:400px;
+	max-height: 550px;
+	border-radius:10px;
+	margin-bottom: 10px
+}
+
+#form-user label
+{
+	float:left;
+	clear:left;
+	min-width: 120px;
+	margin:0px 10px 15px 10px;
+}
+
+input[type="submit"],input[type="button"]
+{
+	float:right;
+	margin: 4px;
+	border:1px solid red;
+    text-decoration:none;
+    padding:5px;
+    cursor:pointer;
+	border:1px solid  	#87CEFA;
+	font:12px Arial, Helvetica, sans-serif;
+    color:#ffffff;
+    background: 	#6495ED;
+}	
+.ui-datepicker-trigger
+{
+	position:absolute;
+}
+input:focus
+{
+	background:#E6E6FA;
+}
+#form-user input[type="button"]
+{
+	margin-top:6px;
+}
+#form-user input[type="text"]
+{
+	width: 60%;
+	margin:0 auto;
+	padding: 0;
+	margin-bottom:5px;
+	font:13px arial,helvetica-sans-serif;
+	color:hsl(203,60%,40%);
+}
+#form-user textarea
+{
+	width:60%;
+	height:140px;
+	resize:none;
+	margin-left:3px;
+	margin-top:-8px;
+	color:hsl(203,60%,40%);
+}
+form  select
+{
+	font:12px Arial, Helvetica, sans-serif;
+	color:hsl(203,60%,40%);
+	background:#ffffff;
+	width:85%;
+	margin: 3px
+}
+#cont-select-user/*esilo para el contenedor del select*/
+{
+	position:relative;
+	width:calc(100% - 15%);
+	height:13%;
+	background:#B0C4DE;
+	box-shadow: 0px 3px 4px 0px hsla(0,10%,0%,0.6);
+	-moz-box-shadow: 0px 3px 4px 0px hsla(0,10%,0%,0.6);
+	-o-box-shadow: 0px 3px 4px 0px hsla(0,10%,0%,0.6);
+	-webkit-box-shadow: 0px 3px 4px 0px hsla(0,10%,0%,0.6);
+	-ms-box-shadow: 0px 3px 4px 0px hsla(0,10%,0%,0.6);
+	border-radius:4px;
+	-moz-border-radius:4px;
+	-o-border-radius:4px;
+	-webkit-border-radius:4px;
+	-ms-border-radius:4px;
+}
+ h2
+{
+	font:16px arial,helvetica,sans-serif;
+	font-weight:bold;
+	color:#ffffff;
+	margin:4px 4px 0px 5px;
+}
+.select-perfil
+{
+	width:100%;
+	height:150px;
+	border:1px solid  #ADD8E6;
+	margin:10px 0px 5px 5px;
+}
+#form-user 
+{
+	
+	
+	
+}
+
+
+#cont-table-user
+{
+	 width:calc(100% - 25px);
+	margin-left:20px;
+	margin-top:10px;
+}
+
+#tabla
+{
+	color:hsl(203,60%,40%);
+	font:12px Arial, Helvetica, sans-serif;	
+}
+#tabla a
+{
+	color:hsl(203,60%,40%);
+}
+
+
+select
+{
+	background:#ffffff;
+	color:hsl(203,60%,40%);
+	font:12px Arial, Helvetica, sans-serif;
+}
+
+.pantalla_bloqueo {
+	display: none;        /* INICIAR OCULTO, EN LUGAR DE NONE PUEDEN PONER BLOCK Y VER DESDE QUE ENTRA COMO SE VE LA PANTALLA DE BLOQUEO*/
+	position: fixed;    /* MANTENERLO EN LA MISMA POSICION AUNQUE SE SUBA Y BAJE CON EL SCROLL */
+	background: #000;    /* COLOR DE FONDO DE LA PANTALLA DE BLOQUEO */
+	height: 100%;        /* ALTURA IGUAL AL TAMAÑO DEL NAVEGADOR */
+	width:     100%;        /* ANCHURA IGUAL AL TAMAÑO DEL NAVEGADOR */
+	top: 0;            /* QUE SE UBIQUE AL INICIO DE LA PARTE SUPERIOR DE LA VENTANA */
+	opacity:.30;
+	-moz-opacity: 0.20;
+	filter: alpha(opacity=80);        /* GRADO DE TRANSPARENCIA VA DE 0 A 1*/
+}
+ 
+#mensaje_bloqueador{
+	
+	padding-top: 150px; 
+	margin-top:200px;
+	font:16px Arial, Helvetica, sans-serif;    /* TAMAÑO DEL REÑENO, PARTE SUPERIOR(TOP)*/
+	text-align:     center;    /* ALINEACION DEL TEXTO*/
+}
+#mensaje_bloqueador p
+{
+color:#7FFF00;
+
+} 
+#imagen_bloqueador{
+	color:white;
+	padding-top: 10px;
+	text-align: center;
+}
+ 
+
+.display
+{
+	color:hsl(203,60%,40%);
+}
+.titulo-menu
+{
+	width:calc(100% - 50px);
+	height:30px;
+	background:#6495ED;
+	opacity: .6;
+	filter: Alpha(Opacity=60);	
+	border-radius:4px;
+}
+.titulo-menu h3 
+{
+	color:#ffffff;
+	font:15px Arial, Helvetica, sans-serif;
+	margin-left:8px;
+}
+/*estilos para el slideToggle*/
+#accordion { /* el rectángulo contenedor */
+   width:calc(100% - 50px);
+	height:auto;
+	visiblilty: hidden;
+
+	
+	/*padding: 20px;
+    border: 10px solid #ccc;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;*/
+     
+  }
+  #accordion h5 { /* los enlaces que despliegan y contraen el contenido */
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -moz-box-shadow: 0 0 2px #444 inset;
+    -webkit-box-shadow: 0 0 2px #444 inset;
+    box-shadow: 0 0 2px #444 inset;
+    background:#E7EEF2;
+    color:hsl(203,60%,40%);
+    font:15px  Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    height: auto;
+    padding: 3px;
+    margin:2px;
+    cursor: pointer;
+    
+  }
+  #accordion h5:hover { /* efecto hover sobre esos enlaces */
+    -moz-box-shadow: 0 0 2px #000 inset;
+    -webkit-box-shadow: 0 0 2px #000 inset;
+    box-shadow: 0 0 2px #000 inset;
+    background:#E7EEF2;
+    color:hsl(203,60%,40%);
+  }
+  #accordion h5 span { /* una imagen que permuta segñun el estado del contenido */
+    
+    display: block;
+    height:auto;
+    position: absolute;
+    right: 20px;
+    top: 7px;
+    width: 16px;
+
+  }
+  #accordion h5.active span { /* desplegado */
+    background-position: right bottom;
+	height:400px;
+  }
+ #accordion div
+ {
+ 	 
+ 	
+ }
+#cont-form-materia
+{
+	background:#F8F8FF;
+	width:calc(100% - 20px);
+	height:auto;
+	margin:3px;
+	
+}
+#form-materia, #form-registro-materia
+{
+	width:750px;
+	height:auto;
+	margin:5px;
+	font:13px Arial, Helvetica, sans-serif;
+	color:hsl(203,60%,40%);
+	
+}
+#form-registro-materia legend
+{
+	background:#E7EEF2 ;
+	width:500px;
+	height:30px;
+	color:hsl(203,60%,40%);
+	margin:8px;
+	text-align:left;
+	text-indent:1em;
+	font:13px  Arial, Helvetica, sans-serif;
+	word-spacing:0.2em;
+
+}
+#form-registro-materia label
+{
+	display: inline;
+	float:left;
+	width:223px;
+	padding:8px;
+	min-width: 110px;
+	margin:0px 10px 15px 10px;
+	background:#E7EEF2 ;	
+}
+#form-registro-materia input
+{
+	margin:0px 10px 15px 10px;
+	color:hsl(203,60%,40%);
+}
+#form-materia legend
+{
+	background:#E7EEF2 ;
+	width:500px;
+	height:30px;
+	color:hsl(203,60%,40%);
+	margin:8px;
+	text-align:left;
+	text-indent:1em;
+	font:13px  Arial, Helvetica, sans-serif;
+	word-spacing:0.2em;
+}
+#form-materia label
+{
+	display: inline;
+	float:left;
+	width:223px;
+	padding:8px;
+	min-width: 110px;
+	margin:0px 10px 15px 10px;
+	background:#E7EEF2 ;
+}
+#form-materia input
+{
+	margin:0px 10px 15px 10px;
+	color:hsl(203,60%,40%);
+
+}
+#form-materia input[type="radio"]
+{
+	/*margin:0px 10px 15px 10px;*/
+	clear:left;
+
+}
+#form-registro-periodo fieldset
+{
+	width:520px;
+	height:auto;
+	
+}
+#form-registro-periodo legend
+{
+	background:#E7EEF2 ;
+	width:500px;
+	height:30px;
+	color:hsl(203,60%,40%);
+	margin:8px;
+	text-align:left;
+	text-indent:1em;
+	font:13px  Arial, Helvetica, sans-serif;
+	word-spacing:0.2em;
+
+}
+
+#form-registro-periodo label
+{
+	clear:left;
+	float:left;
+	width:150px;
+	padding:8px;
+	min-width: 110px;
+	margin:0px 10px 15px 10px;
+	background:#E7EEF2 ;
+	color:hsl(203,60%,40%);
+}
+#form-registro-periodo input
+{
+	
+	float:left;
+	padding:2px;
+	margin:0px 10px 15px 10px;
+	clear:right;
+	color:hsl(203,60%,40%);
+}
+#form-registro-periodo select
+{
+	margin:0px 10px 15px 10px;
+	font:12px Arial, Helvetica, sans-serif;
+	color:hsl(203,60%,40%);
+	background:#ffffff;
+	width:180px;
+}
+.bloq-submit
+{
+	width:500px;
+	height:50px;
+	background:#E7EEF2 ;
+	margin-left:10px;
+}
+
+
+.pantalla_modal_hide {
+	display: none;       
+	position: fixed;    
+	top: 50%;
+	left: 50%;
+	width:calc(100% - 60%);
+	background: #000;    
+	opacity:.10;
+	-moz-opacity: 0.10;
+	filter: alpha(opacity=10);        
+}
+
+.pantalla_modal_show {
+	display: block;        
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0,0,0,0.5);
+	z-index: 1000;
+
+}
+.boton-cancelar
+{
+	margin-top:-21px
+}
